@@ -3,329 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>梅田ジャンカラ 昼30分料金一覧【9月版】</title>
+  <title>梅田ジャンカラ 昼 会員30分料金一覧｜10月版</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
-      background: linear-gradient(160deg, #fff5f5 0%, #fff 40%, #f0f7ff 100%);
+      background: #f5f7fa;
       color: #222;
       line-height: 1.6;
-      padding: 20px 12px 40px;
+      padding: 20px;
     }
     .container {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
     }
     header {
-      text-align: center;
-      margin-bottom: 28px;
-      padding: 24px 16px;
-      background: #e60012;
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
       color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(230,0,18,0.25);
+      padding: 28px 24px;
+      text-align: center;
     }
     header h1 {
       font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
-    header .version {
+    header .badge {
       display: inline-block;
-      margin-top: 10px;
       background: #fff;
-      color: #e60012;
+      color: #c0392b;
       font-weight: 700;
       font-size: 0.95rem;
-      padding: 4px 16px;
-      border-radius: 999px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-top: 8px;
     }
     .note {
       background: #fff8e6;
-      border-left: 5px solid #f5a623;
-      padding: 12px 16px;
-      margin-bottom: 24px;
-      border-radius: 0 8px 8px 0;
-      font-size: 0.9rem;
-    }
-    .shop {
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      margin-bottom: 22px;
-      overflow: hidden;
-    }
-    .shop-header {
-      background: #333;
-      color: #fff;
+      border-left: 4px solid #f39c12;
       padding: 14px 18px;
-      font-size: 1.15rem;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
+      margin: 20px 24px 0;
+      font-size: 0.9rem;
+      border-radius: 0 6px 6px 0;
     }
-    .shop-header a {
-      color: #ffd54f;
-      font-size: 0.85rem;
-      text-decoration: none;
-    }
-    .shop-header a:hover { text-decoration: underline; }
     table {
-      width: 100%;
+      width: calc(100% - 48px);
+      margin: 24px;
       border-collapse: collapse;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
     }
     th, td {
-      padding: 11px 8px;
+      padding: 12px 10px;
       text-align: center;
       border-bottom: 1px solid #eee;
     }
     th {
-      background: #f7f7f7;
+      background: #f8f9fa;
       font-weight: 600;
       color: #444;
     }
-    tr:last-child td { border-bottom: none; }
-    .weekday { background: #e8f5e9; }
-    .holiday { background: #fff3e0; }
-    .price { font-weight: 700; color: #e60012; }
-    .footer-prompt {
-      margin-top: 40px;
-      padding: 20px;
-      background: #f5f5f5;
-      border-radius: 12px;
-      border: 1px dashed #999;
+    tr:hover { background: #fafafa; }
+    td:first-child {
+      text-align: left;
+      font-weight: 500;
+    }
+    .price {
+      font-weight: 700;
+      color: #e74c3c;
+    }
+    .footer-note {
+      margin: 10px 24px 24px;
       font-size: 0.85rem;
+      color: #666;
+      line-height: 1.7;
+    }
+    .prompt-box {
+      margin: 30px 24px 24px;
+      padding: 16px;
+      background: #f1f3f5;
+      border-radius: 8px;
+      font-size: 0.8rem;
       color: #555;
+      border: 1px dashed #ccc;
       white-space: pre-wrap;
       word-break: break-all;
     }
-    .footer-prompt h3 {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-    footer {
-      text-align: center;
-      margin-top: 24px;
-      font-size: 0.8rem;
+    .prompt-label {
+      font-size: 0.75rem;
       color: #888;
+      margin-bottom: 6px;
+      display: block;
     }
     @media (max-width: 600px) {
-      header h1 { font-size: 1.25rem; }
-      table { font-size: 0.8rem; }
-      th, td { padding: 8px 4px; }
+      table { font-size: 0.85rem; }
+      th, td { padding: 10px 6px; }
+      header h1 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>梅田ジャンカラ<br>昼の30分料金一覧</h1>
-      <div class="version">9月版</div>
+      <h1>梅田ジャンカラ<br>昼・会員 30分料金一覧</h1>
+      <span class="badge">10月版</span>
     </header>
 
     <div class="note">
-      ※ すべて<strong>ソフトドリンク飲み放題付き・税込・1名様あたり</strong>の料金です。<br>
-      ※ 表示価格は公式サイト 2026年9月29日時点のものです。価格は予告なく変更される場合があります。<br>
-      ※ 正確な最新料金は各店舗の公式ページでご確認ください。
+      ※料金はすべて<strong>税込・1名様あたり・ソフトドリンク飲み放題付き</strong>です。<br>
+      ※表示は公式サイト（2026年10月上旬時点）に基づく目安です。実際の料金は店舗・時期により変更される場合があります。ご利用前に公式サイトでご確認ください。
     </div>
 
-    <!-- 茶屋町店 -->
-    <div class="shop">
-      <div class="shop-header">
-        ジャンカラ 茶屋町店
-        <a href="https://jankara.ne.jp/shop/100/" target="_blank" rel="noopener">公式ページ →</a>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>区分</th>
-            <th>学生会員</th>
-            <th>学生</th>
-            <th>会員</th>
-            <th>シニア</th>
-            <th>一般</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="weekday">
-            <td>平日<br><small>10時～19時</small></td>
-            <td class="price">¥220</td>
-            <td class="price">¥270</td>
-            <td class="price">¥240</td>
-            <td class="price">¥220</td>
-            <td class="price">¥350</td>
-          </tr>
-          <tr class="holiday">
-            <td>土日祝<br><small>10時～19時</small></td>
-            <td class="price">¥350</td>
-            <td class="price">¥440</td>
-            <td class="price">¥440</td>
-            <td class="price">¥440</td>
-            <td class="price">¥520</td>
-          </tr>
-        </tbody>
-      </table>
+    <table>
+      <thead>
+        <tr>
+          <th>店舗名</th>
+          <th>平日</th>
+          <th>土日祝</th>
+          <th>適用時間帯</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>スーパージャンカラ茶屋町店</td>
+          <td class="price">¥220</td>
+          <td class="price">¥440</td>
+          <td>開店～19時</td>
+        </tr>
+        <tr>
+          <td>ジャンカラ茶屋町店</td>
+          <td class="price">¥240</td>
+          <td class="price">¥440</td>
+          <td>10時～19時</td>
+        </tr>
+        <tr>
+          <td>阪急東通本店</td>
+          <td class="price">¥230</td>
+          <td class="price">¥300</td>
+          <td>10時～19時</td>
+        </tr>
+        <tr>
+          <td>阪急東通3号店</td>
+          <td class="price">¥230</td>
+          <td class="price">¥300</td>
+          <td>開店～19時</td>
+        </tr>
+        <tr>
+          <td>お初天神店</td>
+          <td class="price">¥240</td>
+          <td class="price">¥350</td>
+          <td>8時～19時</td>
+        </tr>
+        <tr>
+          <td>梅田芝田町店</td>
+          <td class="price">¥370</td>
+          <td class="price">¥470</td>
+          <td>10時～19時</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer-note">
+      ・会員料金はジャンカラ会員カード提示時の料金です。<br>
+      ・1名利用の場合、店舗により追加料金（30分＋30〜50円程度）がかかることがあります。<br>
+      ・学生会員・シニア料金など、さらに安い区分がある店舗もあります。<br>
+      ・最新情報は公式サイト（jankara.ne.jp）の各店舗ページでご確認ください。
     </div>
 
-    <!-- スーパージャンカラ茶屋町店 -->
-    <div class="shop">
-      <div class="shop-header">
-        スーパージャンカラ 茶屋町店
-        <a href="https://jankara.ne.jp/shop/106/" target="_blank" rel="noopener">公式ページ →</a>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>区分</th>
-            <th>会員系</th>
-            <th>一般</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="weekday">
-            <td>平日<br><small>開店～19時</small></td>
-            <td class="price">¥220</td>
-            <td class="price">¥350</td>
-          </tr>
-          <tr class="holiday">
-            <td>土日祝<br><small>開店～19時</small></td>
-            <td class="price">¥440</td>
-            <td class="price">¥520</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="prompt-box">
+      <span class="prompt-label">【このサイトを作成したプロンプト】</span>
+梅田のジャンカラで昼の会員30分料金を一覧で表示するHTMLサイトを作ってください　あと10月版という文字も追加してほしいのとこのプロンプト自体の文字をサイトの下部に貼って
     </div>
-
-    <!-- 北新地店 -->
-    <div class="shop">
-      <div class="shop-header">
-        ジャンカラ 北新地店
-        <a href="https://jankara.ne.jp/shop/144/" target="_blank" rel="noopener">公式ページ →</a>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>区分</th>
-            <th>学生会員</th>
-            <th>学生</th>
-            <th>会員</th>
-            <th>シニア</th>
-            <th>一般</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="weekday">
-            <td>平日<br><small>開店～19時</small></td>
-            <td class="price">¥220</td>
-            <td class="price">¥240</td>
-            <td class="price">¥250</td>
-            <td class="price">¥250</td>
-            <td class="price">¥310</td>
-          </tr>
-          <tr class="holiday">
-            <td>土日祝<br><small>開店～19時</small></td>
-            <td class="price">¥270</td>
-            <td class="price">¥300</td>
-            <td class="price">¥300</td>
-            <td class="price">¥300</td>
-            <td class="price">¥340</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 阪急東通3号店 -->
-    <div class="shop">
-      <div class="shop-header">
-        ジャンカラ 阪急東通3号店
-        <a href="https://jankara.ne.jp/shop/103/" target="_blank" rel="noopener">公式ページ →</a>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>区分</th>
-            <th>学生会員</th>
-            <th>学生</th>
-            <th>会員</th>
-            <th>シニア</th>
-            <th>一般</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="weekday">
-            <td>平日<br><small>開店～19時</small></td>
-            <td class="price">¥200</td>
-            <td class="price">¥240</td>
-            <td class="price">¥230</td>
-            <td class="price">¥230</td>
-            <td class="price">¥330</td>
-          </tr>
-          <tr class="holiday">
-            <td>土日祝<br><small>開店～19時</small></td>
-            <td class="price">¥260</td>
-            <td class="price">¥330</td>
-            <td class="price">¥300</td>
-            <td class="price">¥300</td>
-            <td class="price">¥410</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 阪急東通本店 -->
-    <div class="shop">
-      <div class="shop-header">
-        ジャンカラ 阪急東通本店
-        <a href="https://jankara.ne.jp/shop/116/" target="_blank" rel="noopener">公式ページ →</a>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>区分</th>
-            <th>学生会員</th>
-            <th>学生</th>
-            <th>会員</th>
-            <th>シニア</th>
-            <th>一般</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="weekday">
-            <td>平日<br><small>10時～19時</small></td>
-            <td class="price">¥200</td>
-            <td class="price">¥240</td>
-            <td class="price">¥230</td>
-            <td class="price">¥230</td>
-            <td class="price">¥330</td>
-          </tr>
-          <tr class="holiday">
-            <td>土日祝<br><small>10時～19時</small></td>
-            <td class="price">¥260</td>
-            <td class="price">¥330</td>
-            <td class="price">¥300</td>
-            <td class="price">¥300</td>
-            <td class="price">¥410</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="footer-prompt">
-      <h3>このサイトを生成したプロンプト</h3>
-梅田のジャンカラで昼の30分料金を一覧で表示するHTMLサイトを作ってください　
-あと9月版という文字も追加してほしいのと
-このプロンプト自体の文字をサイトの下部に貼って
-    </div>
-
-    <footer>
-      情報源：ジャンカラ公式サイト（jankara.ne.jp）／表示価格は2026年9月29日時点
-    </footer>
   </div>
 </body>
 </html>
